@@ -1,0 +1,16 @@
+.h1-tag {
+    @apply text-3xl md:text-5xl;
+}
+
+.h2-heading {
+    @apply font-medium text-2xl;
+}
+
+.links {
+    @apply text-sm font-semibold text-purple;
+}
+
+.heading-wrapper {
+    @apply flex justify-between pb-4 items-center;
+
+}

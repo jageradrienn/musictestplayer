@@ -1,0 +1,7 @@
+.card {
+    @apply p-2;
+}
+
+.card-wrapper {
+    @apply relative max-w-[100px] sm:max-w-[170px];
+}
