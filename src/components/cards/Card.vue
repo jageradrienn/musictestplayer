@@ -6,11 +6,11 @@ const props = defineProps(["cardItem"]);
   <article class="card">
     <div class="card-wrapper">
       <img
-        class="w-full aspect-ratio rounded-xl"
+        class="w-full aspect-ratio rounded-xl pb-4"
         :src="cardItem.imageUrl"
         :alt="cardItem.alt"
       />
-      <button class="absolute right-5 bottom-3">
+      <button class="absolute right-5 bottom-6">
         <svg
           width="36"
           height="36"
@@ -31,7 +31,7 @@ const props = defineProps(["cardItem"]);
         </svg>
       </button>
     </div>
-    <h4 class=" list-items-title truncate max-w-[170px]">{{ cardItem.title }}</h4>
+    <h4 class="list-items-title truncate max-w-[170px]">{{ cardItem.title }}</h4>
     <p class="list-items-desc">{{ cardItem.author }}</p>
   </article>
 </template>

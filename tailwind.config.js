@@ -7,6 +7,8 @@ export default {
     extend: {
       colors: {
         'purple': '#7C74EE',
+        'linearGreen': '#3DC3C0',
+        'linearPurple': '#8568F5'
       },
       fontFamily: {
         Montserrat: ["Montserrat", "sans"],

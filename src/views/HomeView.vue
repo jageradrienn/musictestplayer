@@ -179,27 +179,7 @@ const headingAuth = "Előadók";
       <div class="flex justify-between items-start align-self-stretch flex-wrap gap-4">
         <Card v-for="card in cardItems" :key="card.id" :cardItem="card" />
       </div>
-      <p>wwwwwwwwwww</p>
-      <p>wwwwwwwwwww</p>
-      <p>wwwwwwwwwww</p>
-      <p>wwwwwwwwwww</p>
-      <p>wwwwwwwwwww</p>
-      <p>wwwwwwwwwww</p>
-      <p>wwwwwwwwwww</p>
-      <p>wwwwwwwwwww</p>
-      <p>wwwwwwwwwww</p>
-      <p>wwwwwwwwwww</p>
-      <p>wwwwwwwwwww</p>
-      <p>wwwwwwwwwww</p>
-      <p>wwwwwwwwwww</p>
-      <p>wwwwwwwwwww</p>
-      <p>wwwwwwwwwww</p>
-      <p>wwwwwwwwwww</p>
-      <p>wwwwwwwwwww</p>
-      <p>wwwwwwwwwww</p>
-      <p>wwwwwwwwwww</p>
-      <p>wwwwwwwwwww</p>
-      <p>wwwwwwwwwww</p>
+      
     </section>
     <Footer :musicElement="musicListItems[0]" />
   </div>

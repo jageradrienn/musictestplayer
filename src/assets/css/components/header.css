@@ -1,0 +1,7 @@
+.nav-item {
+    @apply w-[16.75rem] h-[3.375rem] rounded-xl p-4;
+}
+
+.activebtn {
+    @apply bg-gradient-to-r from-linearGreen to-linearPurple;
+}

@@ -9,3 +9,7 @@
 .links {
     @apply text-sm font-semibold text-purple;
 }
+
+.menu {
+    @apply text-base font-semibold;
+}
