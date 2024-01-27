@@ -24,13 +24,19 @@ import Message from "@/components/icons/message.vue";
           </RouterLink>
         </li>
         <li>
-          <RouterLink to="/faq" class="nav-item flex justify-center items-center gap-1">
+          <RouterLink
+            to="/faq"
+            class="nav-item inactivebtn flex justify-center items-center gap-1"
+          >
             <Live />
             FAQ
           </RouterLink>
         </li>
         <li class="nav-item flex justify-center items-center gap-1" id="contact">
-          <RouterLink to="/faq" class="nav-item flex justify-center items-center gap-1">
+          <RouterLink
+            to="/faq"
+            class="nav-item inactivebtn flex justify-center items-center gap-1"
+          >
             <Message />
             Kapcsolat
           </RouterLink>

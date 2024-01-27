@@ -7,3 +7,7 @@
         @apply bg-gradient-to-r from-linearGreen to-linearPurple text-white;
     }
 }
+
+.inactivebtn {
+    @apply text-[#999]
+}

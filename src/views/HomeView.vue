@@ -3,6 +3,8 @@
 import Footer from "../components/layout/Footer.vue";
 import Card from "../components/cards/Card.vue";
 import Musiclist from "../components/Musiclist.vue";
+import HeadingWrapper from "../components/HeadingWrapper.vue";
+import TopListCard from "../components//cards/TopListCard.vue";
 import image1 from "@/assets/images/pop01.png";
 import image2 from "@/assets/images/pop02.png";
 import image3 from "@/assets/images/pop03.png";
@@ -16,6 +18,8 @@ import image10 from "@/assets/images/pop10.png";
 import image11 from "@/assets/images/pop11.png";
 import image12 from "@/assets/images/pop12.png";
 import footerimg1 from "@/assets/images/purple.png";
+import topimg from "@/assets/images/top100.png";
+import musicimg from "@/assets/images/musorlista.png";
 
 const cardItems = [
   {
@@ -104,83 +108,85 @@ const cardItems = [
   },
 ];
 
-const musicListItems = [
+const Top100Hits = [
   {
     id: 1,
-    url: footerimg1,
-    listId: "1",
     listAuth: "Sial",
-    ListTitle: "Mahalini • 4:03",
+    listTitle: "Mahalini • 4:03",
   },
   {
-    id: 1,
-    url: "",
-    listId: "2",
+    id: 2,
     listAuth: "Purple Noise",
-    ListTitle: "Boris Brejcha • 3:36",
+    listTitle: "Boris Brejcha • 3:36",
   },
   {
-    id: 1,
-    url: "",
-    listId: "3",
+    id: 3,
     listAuth: "Jiwa yang Bersedih",
-    ListTitle: "Ghea Indrawati • 4:38",
+    listTitle: "Ghea Indrawati • 4:38",
   },
   {
-    id: 1,
-    url: "",
-    listId: "4",
+    id: 4,
     listAuth: "Komang",
-    ListTitle: "Raim Laude • 3:42",
-  },
-  {
-    id: 1,
-    url: "",
-    listId: "5",
-    listAuth: "Seven (feat. Latto) [Explicit] by Jung Kook",
-    ListTitle: "Jung Kook, Latto • 3:04",
-  },
-  {
-    id: 1,
-    url: "",
-    listId: "6",
-    listAuth: "Super Shy",
-    ListTitle: "NewJeans • 2:34",
-  },
-  {
-    id: 1,
-    url: "",
-    listId: "7",
-    listAuth: "Somebody’s Pleasure",
-    ListTitle: "Aziz Hedra • 3:44",
-  },
-  {
-    id: 1,
-    url: "",
-    listId: "8",
-    listAuth: "Tally",
-    ListTitle: "BLACKPINK • 3:04",
+    listTitle: "Raim Laude • 3:42",
   },
 ];
 
-const headingPop = "Népszerű zeneszámok";
-const headingTop = "Toplista";
-const headingAuth = "Előadók";
+const MusicListItems = [
+  {
+    id: 1,
+    listAuth: "Seven (feat. Latto) [Explicit] by Jung Kook",
+    listTitle: "Jung Kook, Latto • 3:04",
+  },
+  {
+    id: 2,
+    listAuth: "Super Shy",
+    listTitle: "NewJeans • 2:34",
+  },
+  {
+    id: 3,
+    listAuth: "Somebody’s Pleasure",
+    listTitle: "Aziz Hedra • 3:44",
+  },
+  {
+    id: 4,
+    listAuth: "Tally",
+    listTitle: "BLACKPINK • 3:04",
+  },
+];
 </script>
 
 <template>
   <div>
     <section class="popular">
-      <div class="heading-wrapper">
-        <h2 class="h2-heading">{{ headingPop }}</h2>
-        <a href="#" class="links">Összes</a>
-      </div>
-
+      <HeadingWrapper headingText="Népszerű zeneszámok" linkHref="#" linkText="Összes" />
       <div class="flex justify-between items-start align-self-stretch flex-wrap gap-4">
         <Card v-for="card in cardItems" :key="card.id" :cardItem="card" />
       </div>
-      
     </section>
-    <Footer :musicElement="musicListItems[0]" />
+    <section class="toplist">
+      <HeadingWrapper headingText="Toplista" linkHref="#" linkText="Összes" />
+      <div
+        class="top-grid grid grid-cols-[minmax(0,604px),minmax(0,604px)] justify-center items-center gap-4"
+      >
+        <TopListCard
+          :topListCardUrl="topimg"
+          topListCardAlt="100 TOP Hits"
+          :playList="Top100Hits"
+        />
+        <TopListCard
+          :topListCardUrl="musicimg"
+          topListCardAlt="Műsorlista"
+          :playList="MusicListItems"
+        />
+      </div>
+    </section>
+    <section class="authors pb-24">
+      <HeadingWrapper headingText="Előadók" linkHref="#" linkText="View all" />
+      <div
+        class="flex justify-between items-start align-self-stretch flex-wrap gap-4"
+      ></div>
+    </section>
+
+    <Footer />
   </div>
 </template>
