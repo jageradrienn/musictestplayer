@@ -3,10 +3,5 @@
 }
 
 .card-wrapper {
-    @apply relative max-w-[100px] sm:max-w-[170px];
-}
-
-.heading-wrapper {
-    @apply flex justify-between pb-4 items-center;
-
+    @apply relative max-w-[100px] sm:max-w-[170px] pt-3 pb-3;
 }

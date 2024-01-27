@@ -6,7 +6,7 @@ const props = defineProps(["cardItem"]);
   <article class="card">
     <div class="card-wrapper">
       <img
-        class="w-full aspect-ratio rounded-xl pb-4"
+        class="w-full aspect-ratio rounded-xl"
         :src="cardItem.imageUrl"
         :alt="cardItem.alt"
       />

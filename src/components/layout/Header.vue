@@ -10,21 +10,46 @@ import Message from "@/components/icons/message.vue";
     <div>
       <LogoIpsum class="mx-auto" />
     </div>
-    <nav
-      class="flex justify-center items-center gap-5 flex-col sm:flex-wrap, sm:flex-row"
-    >
-      <button class="nav-item activebtn" type="button">
-        <Home />
-        <RouterLink to="/">Főoldal</RouterLink>
-      </button>
-      <button class="nav-item" type="button">
-        <Live />
-        <RouterLink to="/faq">FAQ</RouterLink>
-      </button>
-      <button class="nav-item" type="button" id="contact">
-        <Message />
-        <span>Kapcsolat</span>
-      </button>
+    <nav class="p-6">
+      <ul
+        class="flex justify-center items-center gap-5 flex-col sm:flex-wrap, sm:flex-row"
+      >
+        <li>
+          <RouterLink
+            to="/"
+            class="nav-item activebtn flex justify-center items-center gap-1"
+          >
+            <Home />
+            Főoldal
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/faq" class="nav-item flex justify-center items-center gap-1">
+            <Live />
+            FAQ
+          </RouterLink>
+        </li>
+        <li class="nav-item flex justify-center items-center gap-1" id="contact">
+          <RouterLink to="/faq" class="nav-item flex justify-center items-center gap-1">
+            <Message />
+            Kapcsolat
+          </RouterLink>
+        </li>
+      </ul>
+
+      <!--   <button
+        class="nav-item activebtn flex justify-center items-center gap-1"
+        type="button"
+      ></button>
+      <button
+        class="nav-item flex justify-center items-center gap-1"
+        type="button"
+      ></button>
+      <button
+        class="nav-item flex justify-center items-center gap-1"
+        type="button"
+        id="contact"
+      ></button> -->
     </nav>
   </header>
 </template>
