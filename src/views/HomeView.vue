@@ -2,6 +2,7 @@
 //import TheWelcome from "../components/TheWelcome.vue";
 import Footer from "../components/layout/Footer.vue";
 import Card from "../components/cards/Card.vue";
+import Musiclist from "../components/Musiclist.vue";
 import image1 from "@/assets/images/pop01.png";
 import image2 from "@/assets/images/pop02.png";
 import image3 from "@/assets/images/pop03.png";
@@ -14,6 +15,7 @@ import image9 from "@/assets/images/pop09.png";
 import image10 from "@/assets/images/pop10.png";
 import image11 from "@/assets/images/pop11.png";
 import image12 from "@/assets/images/pop12.png";
+import footerimg1 from "@/assets/images/purple.png";
 
 const cardItems = [
   {
@@ -102,20 +104,103 @@ const cardItems = [
   },
 ];
 
+const musicListItems = [
+  {
+    id: 1,
+    url: footerimg1,
+    listId: "1",
+    listAuth: "Sial",
+    ListTitle: "Mahalini • 4:03",
+  },
+  {
+    id: 1,
+    url: "",
+    listId: "2",
+    listAuth: "Purple Noise",
+    ListTitle: "Boris Brejcha • 3:36",
+  },
+  {
+    id: 1,
+    url: "",
+    listId: "3",
+    listAuth: "Jiwa yang Bersedih",
+    ListTitle: "Ghea Indrawati • 4:38",
+  },
+  {
+    id: 1,
+    url: "",
+    listId: "4",
+    listAuth: "Komang",
+    ListTitle: "Raim Laude • 3:42",
+  },
+  {
+    id: 1,
+    url: "",
+    listId: "5",
+    listAuth: "Seven (feat. Latto) [Explicit] by Jung Kook",
+    ListTitle: "Jung Kook, Latto • 3:04",
+  },
+  {
+    id: 1,
+    url: "",
+    listId: "6",
+    listAuth: "Super Shy",
+    ListTitle: "NewJeans • 2:34",
+  },
+  {
+    id: 1,
+    url: "",
+    listId: "7",
+    listAuth: "Somebody’s Pleasure",
+    ListTitle: "Aziz Hedra • 3:44",
+  },
+  {
+    id: 1,
+    url: "",
+    listId: "8",
+    listAuth: "Tally",
+    ListTitle: "BLACKPINK • 3:04",
+  },
+];
+
 const headingPop = "Népszerű zeneszámok";
 const headingTop = "Toplista";
 const headingAuth = "Előadók";
 </script>
 
 <template>
-  <section class="popular">
-    <div class="heading-wrapper">
-      <h2 class="h2-heading">{{ headingPop }}</h2>
-      <a href="#" class="links">Összes</a>
-    </div>
+  <div>
+    <section class="popular">
+      <div class="heading-wrapper">
+        <h2 class="h2-heading">{{ headingPop }}</h2>
+        <a href="#" class="links">Összes</a>
+      </div>
 
-    <div class="flex justify-between flex-wrap gap-2">
-      <Card v-for="cardItem in cardItems" :key="cardItem.id" :cardItem="cardItem" />
-    </div>
-  </section>
+      <div class="flex justify-between items-start align-self-stretch flex-wrap gap-4">
+        <Card v-for="card in cardItems" :key="card.id" :cardItem="card" />
+      </div>
+      <p>wwwwwwwwwww</p>
+      <p>wwwwwwwwwww</p>
+      <p>wwwwwwwwwww</p>
+      <p>wwwwwwwwwww</p>
+      <p>wwwwwwwwwww</p>
+      <p>wwwwwwwwwww</p>
+      <p>wwwwwwwwwww</p>
+      <p>wwwwwwwwwww</p>
+      <p>wwwwwwwwwww</p>
+      <p>wwwwwwwwwww</p>
+      <p>wwwwwwwwwww</p>
+      <p>wwwwwwwwwww</p>
+      <p>wwwwwwwwwww</p>
+      <p>wwwwwwwwwww</p>
+      <p>wwwwwwwwwww</p>
+      <p>wwwwwwwwwww</p>
+      <p>wwwwwwwwwww</p>
+      <p>wwwwwwwwwww</p>
+      <p>wwwwwwwwwww</p>
+      <p>wwwwwwwwwww</p>
+      <p>wwwwwwwwwww</p>
+    </section>
+    <Footer :musicElement="musicListItems[0]" />
+  </div>
 </template>

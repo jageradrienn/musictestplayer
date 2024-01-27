@@ -2,11 +2,11 @@
 @import "./css/components/typo.css";
 @import "./css/components/card.css";
 @import "./css/components/contact.css";
+@import "./css/components/footer.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 #app {
   max-width: 1280px;
@@ -15,11 +15,24 @@
   font-weight: normal;
 }
 
-
 @font-face {
   font-family: "Montserrat";
   src: url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;1,500;1,600&display=swap");
 }
+
+.list-items-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #121212;
+}
+
+.list-items-desc {
+  font-size: 14px;
+  font-weight: 500;
+  color: #6B6B6B;
+}
+
+
 
 /*
 

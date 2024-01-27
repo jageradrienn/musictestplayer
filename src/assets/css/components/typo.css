@@ -9,8 +9,3 @@
 .links {
     @apply text-sm font-semibold text-purple;
 }
-
-.heading-wrapper {
-    @apply flex justify-between pb-4 items-center;
-
-}

@@ -1,0 +1,7 @@
+.fixed-footer {
+    @apply max-w-[1280px] h-[105px];
+}
+
+.bp-blur {
+    backdrop-filter: blur(47.5px);
+}
