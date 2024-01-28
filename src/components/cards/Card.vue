@@ -31,7 +31,11 @@ const props = defineProps(["cardItem"]);
         </svg>
       </button>
     </div>
-    <h4 class="list-items-title truncate max-w-[170px]">{{ cardItem.title }}</h4>
-    <p class="list-items-desc">{{ cardItem.author }}</p>
+    <div class="truncate">
+      <h4 class="list-items-title truncate text-center md:text-left">
+        {{ cardItem.title }}
+      </h4>
+      <p class="list-items-desc">{{ cardItem.author }}</p>
+    </div>
   </article>
 </template>

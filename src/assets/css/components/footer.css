@@ -1,5 +1,6 @@
-.fixed-footer {
-    @apply max-w-[1280px] h-[105px];
+.main-footer {
+    box-shadow: 5px 5px 10px 5px #ccc;
+    @apply bg-white/40 w-full fixed bottom-0 min-h-[105px] md:h-[105px] px-[1.875rem] py-[1.25rem] left-0 right-0;
 }
 
 .bp-blur {

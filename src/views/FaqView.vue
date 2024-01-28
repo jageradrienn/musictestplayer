@@ -1,5 +1,14 @@
 <script setup>
 import FaqCard from "../components/cards/FaqCard.vue";
+import { onMounted, onUnmounted } from "vue";
+
+onMounted(() => {
+  document.body.classList.add("bg-faq-page");
+});
+
+onUnmounted(() => {
+  document.body.classList.remove("bg-faq-page");
+});
 
 const faqItems = [
   {
@@ -87,9 +96,3 @@ const popUpItem = {
     <!-- <FaqPopup :popUpItem="popUpItem" /> -->
   </main>
 </template>
-
-<style scoped>
-faq-body {
-  color: white;
-}
-</style>

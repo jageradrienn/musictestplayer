@@ -8,7 +8,8 @@ export default {
       colors: {
         'purple': '#7C74EE',
         'linearGreen': '#3DC3C0',
-        'linearPurple': '#8568F5'
+        'linearPurple': '#8568F5',
+        'bgBlack': '#171b1e',
       },
       fontFamily: {
         Montserrat: ["Montserrat", "sans"],

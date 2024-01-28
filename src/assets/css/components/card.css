@@ -1,7 +1,13 @@
 .card {
-    @apply p-2;
+    @apply p-2.5 max-w-[100px];
 }
 
 .card-wrapper {
-    @apply relative max-w-[100px] sm:max-w-[170px] pt-3 pb-3;
+    @apply relative pt-3 pb-3;
+}
+
+@media screen and (min-width: 450px) {
+    .card {
+        @apply max-w-[130px] md:max-w-[190px];
+    }
 }

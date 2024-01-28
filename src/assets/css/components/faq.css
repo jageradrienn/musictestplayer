@@ -1,5 +1,4 @@
 @layer components {
-
     .faq-accordion {
         @apply max-w-[900px] mx-auto;
     }
@@ -7,5 +6,11 @@
     .faq-article {
         @apply bg-slate-500 m-6 max-w-[350px] rounded-xl p-5 sm:max-w-[550px] rounded-2xl p-7 md:max-w-[900px] rounded-3xl p-8;
     }
+}
 
+.bg-faq-page {
+    background-image: url("../../svg/bg-faq.svg");
+    /*     background-attachment: fixed;
+    background-position-y: 35%; */
+    @apply bg-bgBlack bg-no-repeat bg-cover text-white;
 }

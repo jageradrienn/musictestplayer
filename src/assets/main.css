@@ -12,15 +12,17 @@
 @tailwind utilities;
 
 #app {
-  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;
 }
 
-.container {
-  max-width: 1280px;
+@layer components {
+  .container {
+    @apply xl:max-w-[1280px] mx-auto;
+  }
 }
+
 
 @font-face {
   font-family: "Montserrat";
@@ -28,13 +30,11 @@
 }
 
 .list-items-title {
-  font-size: 16px;
-  font-weight: 500;
   color: #121212;
+  @apply text-base font-medium;
 }
 
 .list-items-desc {
-  font-size: 14px;
-  font-weight: 500;
-  color: #6B6B6B;
+  color: #6b6b6b;
+  @apply truncate text-center md:text-left font-medium text-sm;
 }

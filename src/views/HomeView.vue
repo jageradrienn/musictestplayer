@@ -32,84 +32,84 @@ import a07 from "@/assets/images/A07.png";
 const cardItems = [
   {
     id: 1,
-    circleTitle: "Take What You Want",
+    title: "Take What You Want",
     imageUrl: image1,
     author: "Ozzy Osbourne",
     alt: "Ozzy Osbourne - Take What You Want",
   },
   {
     id: 2,
-    circleTitle: "Unstoppable",
+    title: "Unstoppable",
     imageUrl: image2,
     author: "Sia",
     alt: "Unstoppable - Sia",
   },
   {
     id: 3,
-    circleTitle: "From Paris to Berlin (Chrit Leaf Remix)",
+    title: "From Paris to Berlin (Chrit Leaf Remix)",
     imageUrl: image3,
     author: "Braaheim, Chrit Leaf",
     alt: "From Paris to Berlin (Chrit Leaf Remix) - Braaheim, Chrit Leaf",
   },
   {
     id: 4,
-    circleTitle: "Super Shy",
+    title: "Super Shy",
     imageUrl: image4,
     author: "NewJeans",
     alt: "Super Shy - NewJeans",
   },
   {
     id: 5,
-    circleTitle: "Seperti Kiash",
+    title: "Seperti Kiash",
     imageUrl: image5,
     author: "Rizky Febian",
     alt: "Seperti Kiash - Rizky Febian ",
   },
   {
     id: 6,
-    circleTitle: "Belly Dancer",
+    title: "Belly Dancer",
     imageUrl: image6,
     author: "Imanbek, BYOR",
     alt: "Belly Dancer - Imanbek, BYOR",
   },
   {
     id: 7,
-    circleTitle: "Capula",
+    title: "Capula",
     imageUrl: image7,
     author: "JeeCee",
     alt: "Capula - JeeCee",
   },
   {
     id: 8,
-    circleTitle: "Close to me",
+    title: "Close to me",
     imageUrl: image8,
     author: "Damo",
     alt: "Close to me - Damo",
   },
   {
     id: 9,
-    circleTitle: "Need You Tonight",
+    title: "Need You Tonight",
     imageUrl: image9,
     author: "INXS",
     alt: "Need You Tonight - INXS",
   },
   {
     id: 10,
-    circleTitle: "Gravity (feat. Laura Korinth) - edit",
+    title: "Gravity (feat. Laura Korinth) - edit",
     imageUrl: image10,
     author: "Boris Brejcha",
     alt: "Gravity (feat. Laura Korinth) - Boris Brejcha",
   },
   {
     id: 11,
-    circleTitle: "Crab Rave",
+    title: "Crab Rave",
     imageUrl: image11,
     author: "Noisestorm",
     alt: "Crab Rave - Noisestorm",
   },
   {
     id: 12,
-    circleTitle: "Mr. Saxobeat",
+    title: "Mr. Saxobeat",
     imageUrl: image12,
     author: "Klaas",
     alt: "Mr. Saxobeat- Klaas",
@@ -212,14 +212,16 @@ const CirlceListItems = [
   <main class="container">
     <section class="popular">
       <HeadingWrapper headingText="Népszerű zeneszámok" linkHref="#" linkText="Összes" />
-      <div class="flex justify-between items-start align-self-stretch flex-wrap gap-4">
+      <div
+        class="flex justify-between md:justify-center xl:justify-between items-start align-self-stretch flex-wrap gap-4"
+      >
         <Card v-for="card in cardItems" :key="card.id" :cardItem="card" />
       </div>
     </section>
     <section class="toplist">
       <HeadingWrapper headingText="Toplista" linkHref="#" linkText="Összes" />
       <div
-        class="top-grid grid grid-cols-1 justify-center items-center gap-4 md:grid-cols-[minmax(0,604px),minmax(0,604px)]"
+        class="top-grid grid grid-cols-1 justify-center items-center gap-4 sm:grid-cols-[minmax(0,604px),minmax(0,604px)]"
       >
         <TopListCard
           :topListCardUrl="topimg"
@@ -235,7 +237,7 @@ const CirlceListItems = [
     </section>
     <section class="authors pb-24">
       <HeadingWrapper headingText="Előadók" linkHref="#" linkText="View all" />
-      <div class="flex justify-between items-start gap-4">
+      <div class="flex items-start gap-4 flex-wrap justify-center xl:justify-between">
         <CircleCard
           v-for="item in CirlceListItems"
           :key="item.id"
@@ -249,4 +251,3 @@ const CirlceListItems = [
     <!-- <FaqPopup :popUpItem="popUpItem" /> -->
   </main>
 </template>
-circleUrl", "circleAlt", "circleTitle

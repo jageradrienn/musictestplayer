@@ -1,6 +1,6 @@
 @layer components {
     .hits-wrapper {
-        @apply flex justify-start items-center pt-4 pr-4 pb-4;
+        @apply flex flex-col sm:flex-row justify-start sm:items-center pt-4 pr-4 pb-4;
     }
 
 }

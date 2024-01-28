@@ -13,10 +13,9 @@ import Progress from "../progress.vue";
 
 <template>
   <footer
-    class="bg-white/40 bp-blur w-full fixed bottom-0 min-h-[105px] md:h-[105px] px-[1.875rem] py-[1.25rem]"
-  >
+    class="main-footer bp-blur">
     <div
-      class="fixed-footer grid grid-cols-1 md:grid-cols-[minmax(0,305px),minmax(0,747px),minmax(0,232px)] row-auto"
+      class="grid grid-cols-1 gap-4 md:grid-cols-[minmax(0,305px),minmax(0,787px),minmax(0,232px)] mx-auto place-content-center"
     >
       <section class="footer-music">
         <div class="flex justify-start items-center gap-4">
