@@ -5,6 +5,7 @@
 @import "./css/components/footer.css";
 @import "./css/components/header.css";
 @import "./css/components/topLists.css";
+@import "./css/components/faq.css";
 
 @tailwind base;
 @tailwind components;
@@ -15,6 +16,10 @@
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;
+}
+
+.container {
+  max-width: 1280px;
 }
 
 @font-face {

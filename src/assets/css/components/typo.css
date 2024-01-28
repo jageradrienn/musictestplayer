@@ -1,5 +1,5 @@
 .h1-tag {
-    @apply text-3xl md:text-5xl;
+    @apply text-[28px] text-center md:text-[32px] pb-3;
 }
 
 .h2-heading {

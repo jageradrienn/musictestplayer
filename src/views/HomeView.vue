@@ -209,7 +209,7 @@ const CirlceListItems = [
 </script>
 
 <template>
-  <div>
+  <main class="container">
     <section class="popular">
       <HeadingWrapper headingText="Népszerű zeneszámok" linkHref="#" linkText="Összes" />
       <div class="flex justify-between items-start align-self-stretch flex-wrap gap-4">
@@ -245,6 +245,8 @@ const CirlceListItems = [
     </section>
 
     <Footer />
-  </div>
+
+    <!-- <FaqPopup :popUpItem="popUpItem" /> -->
+  </main>
 </template>
 circleUrl", "circleAlt", "circleTitle
