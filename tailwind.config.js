@@ -12,7 +12,7 @@ export default {
         'bgBlack': '#171b1e',
       },
       fontFamily: {
-        Montserrat: ["Montserrat", "sans"],
+        montserrat: "Montserrat",
       }
     },
   },

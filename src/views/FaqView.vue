@@ -1,72 +1,80 @@
 <script setup>
 import FaqCard from "../components/cards/FaqCard.vue";
-import { onMounted, onUnmounted } from "vue";
+import { onMounted, onUnmounted, ref } from "vue";
 
-onMounted(() => {
+onMounted(async () => {
   document.body.classList.add("bg-faq-page");
+  await loadHtmlRawFile();
 });
 
 onUnmounted(() => {
   document.body.classList.remove("bg-faq-page");
 });
 
+const formattedText = ref("");
+
+const loadHtmlRawFile = async (item) => {
+  try {
+    const response = await fetch("../components/raws/summary.html");
+    if (response.ok) {
+      item.formattedText = await response.text();
+    } else {
+      console.error(`Failed to load HTML file for item ${item.id}`);
+    }
+  } catch (error) {
+    console.error(`Error loading HTML file for item ${item.id}:`, error);
+  }
+};
+
+onMounted(loadHtmlRawFile);
+
 const faqItems = [
   {
     id: "1",
     title: "Hol találom az összefoglalómat?",
-    text: `Az összefoglalódat a Musictest mobilalkalmazásában találod.
-
-    1. Koppints a Főoldal ikonra.
-    2. Válaszd ki az összefoglaló falát.
-    3. Az összefoglalód történeteit Az összefoglalód opcióra koppintva tekintheted meg.
-
-    Megjegyzés: Győződj meg arról, hogy a Musictest alkalmazás legfrissebb verzióját használod.
-
-    Ha inkább az asztali alkalmazást vagy a webes verziót használod szívesebben, lépj a musictest.hu/wrapped oldalra, és tudd meg, mit árul el rólad, hogy miket hallgattál ebben az évben.
-
-    Ha nem jelenik meg az összefoglalód, olvasd el ezt a topikot a közösségi fórumunkon.`,
+    path: "../components/raws/summary.html",
   },
   {
     id: "2",
     title: "Az összefoglaló a Musictest Lite felületén is elérhető?",
-    text: "Lorem Ipsum.....",
+    path: "../components/raws/lorem.html",
   },
   {
     id: "3",
     title: "Nem tartozik fiók az e-mail-címhez?",
-    text: "Lorem Ipsum.....",
+    path: "../components/raws/lorem.html",
   },
   {
     id: "4",
     title: "Nem kaptál e-mailt a visszaállításról?",
-    text: "Lorem Ipsum.....",
+    path: "../components/raws/lorem.html",
   },
   {
     id: "5",
     title: "Érvénytelen jelszó-visszaállítási hivatkozás?",
-    text: "Lorem Ipsum.....",
+    path: "../components/raws/lorem.html",
   },
   {
     id: "6",
     title:
       "A privát zenehallgatás és az offline módban történő lejátszás beleszámít az összefoglalóba?",
-    text: "Lorem Ipsum.....",
+    path: "../components/raws/lorem.html",
   },
   {
     id: "7",
     title:
       "Az „A kedvenc dalaid 2023” elnevezésű műsorlistán aszerint vannak sorba rendezve a dalok, hogy melyiket hallgattam a legtöbbet?",
-    text: "Lorem Ipsum.....",
+    path: "../components/raws/lorem.html",
   },
   {
     id: "8",
     title: "Megoszthatom az „A kedvenc dalaid 2023” elnevezésű műsorlistámat másokkal?",
-    text: "Lorem Ipsum.....",
+    path: "../components/raws/lorem.html",
   },
   {
     id: "9",
     title: "A műsorlisták el fognak tűnni egy adott időpontban?",
-    text: "Lorem Ipsum.....",
+    path: "../components/raws/lorem.html",
   },
 ];
 
@@ -93,6 +101,7 @@ const popUpItem = {
     <section class="faq-accordion">
       <FaqCard v-for="item in faqItems" :key="item.id" :faqItem="item" />
     </section>
+
     <!-- <FaqPopup :popUpItem="popUpItem" /> -->
   </main>
 </template>

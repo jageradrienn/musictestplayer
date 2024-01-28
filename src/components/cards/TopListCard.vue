@@ -6,11 +6,9 @@ import Musiclist from ".././Musiclist.vue";
 
 <template>
   <article class="hits-wrapper">
-    <div
-      class="relative sm:max-w-[170px] w-full max-h-[200px] sm:max-h-[100%] mb-5 sm:mb-0"
-    >
+    <div class="relative w-full max-h-[200px] mb-5 sm:max-w-[170px] max-h-[100%] mb-0">
       <img
-        class="sm:max-w-[170px] w-full max-h-[200px] md:max-h-[100%] object-cover md:object-contain rounded-xl"
+        class="w-full max-h-[200px] object-cover sm:max-w-[170px] md:max-h-[100%] object-contain rounded-xl"
         :src="topListCardUrl"
         :alt="topListCardAlt"
       />

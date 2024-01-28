@@ -4,7 +4,7 @@
     }
 
     .faq-article {
-        @apply bg-slate-500 m-6 max-w-[350px] rounded-xl p-5 sm:max-w-[550px] rounded-2xl p-7 md:max-w-[900px] rounded-3xl p-8;
+        @apply flex flex-col justify-center bg-slate-500 text-black mb-4 max-w-[350px] rounded-xl p-6 sm:max-w-[550px] rounded-2xl md:max-w-[900px] rounded-3xl;
     }
 }
 
@@ -13,4 +13,9 @@
     /*     background-attachment: fixed;
     background-position-y: 35%; */
     @apply bg-bgBlack bg-no-repeat bg-cover text-white;
+}
+
+.close-arrow {
+    box-shadow: 0px 5px 16px 0px rgba(64, 56, 153, 0.1);
+    @apply max-w-[50px] max-h-[50px] rounded-full;
 }
