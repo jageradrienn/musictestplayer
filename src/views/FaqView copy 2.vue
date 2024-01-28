@@ -1,10 +1,9 @@
 <script setup>
 import FaqCard from "../components/cards/FaqCard.vue";
-import { onMounted, onUnmounted } from "vue";
+import { onMounted, onUnmounted, ref } from "vue";
 
 onMounted(() => {
   document.body.classList.add("bg-faq-page");
-  
 });
 
 onUnmounted(() => {

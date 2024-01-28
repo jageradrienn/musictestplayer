@@ -1,15 +1,32 @@
 <script setup>
 import FaqCard from "../components/cards/FaqCard.vue";
-import { onMounted, onUnmounted } from "vue";
+import { onMounted, onUnmounted, ref } from "vue";
 
-onMounted(() => {
+onMounted(async () => {
   document.body.classList.add("bg-faq-page");
-  
+  await loadHtmlRawFile();
 });
 
 onUnmounted(() => {
   document.body.classList.remove("bg-faq-page");
 });
+
+const formattedText = ref("");
+
+const loadHtmlRawFile = async (item) => {
+  try {
+    const response = await fetch("../components/raws/summary.html");
+    if (response.ok) {
+      item.formattedText = await response.text();
+    } else {
+      console.error(`Failed to load HTML file for item ${item.id}`);
+    }
+  } catch (error) {
+    console.error(`Error loading HTML file for item ${item.id}:`, error);
+  }
+};
+
+onMounted(loadHtmlRawFile);
 
 const faqItems = [
   {
