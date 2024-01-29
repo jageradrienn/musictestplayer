@@ -28,6 +28,9 @@ import a04 from "@/assets/images/A04.png";
 import a05 from "@/assets/images/A05.png";
 import a06 from "@/assets/images/A06.png";
 import a07 from "@/assets/images/A07.png";
+import { onMounted, ref } from "vue";
+
+const isHomeActive = ref(true);
 
 const cardItems = [
   {
