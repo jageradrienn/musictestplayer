@@ -30,6 +30,8 @@ import a06 from "@/assets/images/A06.png";
 import a07 from "@/assets/images/A07.png";
 import { onMounted, ref } from "vue";
 
+import Popup from "../components/Popup.vue";
+
 const isHomeActive = ref(true);
 
 const cardItems = [
@@ -249,8 +251,8 @@ const CirlceListItems = [
       </div>
     </section>
 
-    <Footer />
-
+    <!--  <Footer /> -->
+    <Popup />
     <!-- <FaqPopup :popUpItem="popUpItem" /> -->
   </main>
 </template>

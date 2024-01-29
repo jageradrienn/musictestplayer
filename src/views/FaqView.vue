@@ -2,6 +2,8 @@
 import FaqCard from "../components/cards/FaqCard.vue";
 import { onMounted, onUnmounted, ref } from "vue";
 
+
+
 const isHomeActive = ref(true);
 
 onMounted(() => {

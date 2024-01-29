@@ -10,6 +10,11 @@ export default {
         'linearGreen': '#3DC3C0',
         'linearPurple': '#8568F5',
         'bgBlack': '#171b1e',
+        'popupbg': '#f7f7f7',
+        'popupinput': '#EFF1FD',
+        'popuptext': '#A9B0F3',
+        'dark': '#121212',
+        'popupsubmit': '#7C74EE'
       },
       fontFamily: {
         montserrat: "Montserrat",

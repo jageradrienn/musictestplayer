@@ -1,0 +1,9 @@
+.popupDiv {
+    @apply mx-auto bg-popupbg text-dark p-7 flex flex-col items-center justify-center max-w-[450px] md:max-w-[900px] md:p-[3.75rem];
+}
+
+@layer utilities {
+    .submit-btn {
+        @apply text-white bg-popupsubmit rounded w-full h-[40px] flex justify-center items-center gap-2 mt-7 md:h-[54px] rounded-3xl;
+    }
+}
