@@ -1,6 +1,23 @@
 <script setup>
 import LogoIpsum from "@/components/icons/logo.vue";
-import { onMounted, defineComponent } from "vue";
+import { onMounted, defineComponent, onBeforeUnmount } from "vue";
+
+/* const contactClick = ref(false);
+const isUpscroll = () => {
+  return window.scrollY > 0;
+};
+
+const handleScroll = () => {
+  upScroll.value = isUpscroll();
+};
+
+onMounted(() => {
+  contact - link.addEventListener("click", ContactClick);
+});
+
+onBeforeUnmount(() => {
+  contact - link.removeEventListener("scroll", handleScroll);
+}); */
 
 onMounted(() => {
   const changeMenu = (ev) => {

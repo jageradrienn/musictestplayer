@@ -12,8 +12,7 @@ import Progress from "../progress.vue";
 </script>
 
 <template>
-  <footer
-    class="main-footer bp-blur">
+  <footer class="main-footer bp-blur">
     <div
       class="grid grid-cols-1 gap-4 md:grid-cols-[minmax(0,305px),minmax(0,787px),minmax(0,232px)] mx-auto place-content-center"
     >

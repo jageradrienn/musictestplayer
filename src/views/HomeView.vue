@@ -1,6 +1,7 @@
 <script setup>
 //import TheWelcome from "../components/TheWelcome.vue";
 import Footer from "../components/layout/Footer.vue";
+import Header from "../components/layout/Header.vue";
 import Card from "../components/cards/Card.vue";
 import Musiclist from "../components/Musiclist.vue";
 import HeadingWrapper from "../components/HeadingWrapper.vue";
@@ -28,11 +29,27 @@ import a04 from "@/assets/images/A04.png";
 import a05 from "@/assets/images/A05.png";
 import a06 from "@/assets/images/A06.png";
 import a07 from "@/assets/images/A07.png";
-import { onMounted, ref } from "vue";
+import { onMounted, ref, onBeforeUnmount } from "vue";
 
 import Popup from "../components/Popup.vue";
 
-const isHomeActive = ref(true);
+const upScroll = ref(false);
+
+const isUpscroll = () => {
+  return window.scrollY > 0;
+};
+
+const handleScroll = () => {
+  upScroll.value = isUpscroll();
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
 
 const cardItems = [
   {
@@ -251,8 +268,7 @@ const CirlceListItems = [
       </div>
     </section>
 
-    <!--  <Footer /> -->
-    <Popup />
-    <!-- <FaqPopup :popUpItem="popUpItem" /> -->
+    <Footer :class="{ show: upScroll, hidden: !upScroll }" />
+    <Popup :class="{ show: contactClick, hidden: !contactClick }" />
   </main>
 </template>
