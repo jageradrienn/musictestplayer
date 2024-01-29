@@ -14,7 +14,7 @@ onMounted(() => {
 
       if (!wasActive) {
         homeLink.classList.replace("inactive-btn", "active-btn");
-        imgHome.setAttribute("src", "./src/components/icons/home2.svg");
+        // imgHome.setAttribute("src", "./src/components/icons/home2.svg");
         faqLink.classList.replace("active-btn", "inactive-btn");
         contactLink.classList.replace("active-btn", "inactive-btn");
       }
@@ -23,20 +23,20 @@ onMounted(() => {
 
       if (!wasActive) {
         faqLink.classList.replace("inactive-btn", "active-btn");
-        imgFaq.setAttribute("src", "./src/components/icons/question2.svg");
+        //  imgFaq.setAttribute("src", "./src/components/icons/question2.svg");
         homeLink.classList.replace("active-btn", "inactive-btn");
-        imgHome.setAttribute("src", "./src/components/icons/home2.svg");
+        //  imgHome.setAttribute("src", "./src/components/icons/home2.svg");
         contactLink.classList.replace("active-btn", "inactive-btn");
-        imgContact.setAttribute("src", "./src/components/icons/contact.svg");
+        // imgContact.setAttribute("src", "./src/components/icons/contact.svg");
       }
     } else if (ev.target.innerText === "Kapcsolat") {
       wasActive = contactLink.classList.contains("active-btn");
 
       if (!wasActive) {
         contactLink.classList.replace("inactive-btn", "active-btn");
-        imgContact.setAttribute("src", "./src/components/icons/contact.svg");
+        //   imgContact.setAttribute("src", "./src/components/icons/contact.svg");
         homeLink.classList.replace("active-btn", "inactive-btn");
-        imgHome.setAttribute("src", "./src/components/icons/home2.svg");
+        //   imgHome.setAttribute("src", "./src/components/icons/home2.svg");
         faqLink.classList.replace("active-btn", "inactive-btn");
       }
     }
