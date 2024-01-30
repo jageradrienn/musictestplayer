@@ -8,8 +8,6 @@
 @import "./css/components/topLists.css";
 @import "./css/components/faq.css";
 
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -31,14 +29,11 @@
 
   .show {
     @apply opacity-[1] transition ease-in-out duration-[0.3s];
-
-
   }
 
   .hidden {
     @apply opacity-[0] transition ease-in-out duration-[0.3s] pointer-events-none;
   }
-
 }
 
 .list-items-title {

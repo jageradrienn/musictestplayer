@@ -1,5 +1,4 @@
 <script setup>
-/* const props = defineProps(["topListCardUrl", "topListCardAlt", "musicElement"]); */
 const props = defineProps(["topListCardUrl", "topListCardAlt", "playList"]);
 import Musiclist from ".././Musiclist.vue";
 </script>

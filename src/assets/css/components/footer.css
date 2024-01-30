@@ -3,6 +3,8 @@
     @apply bg-white/40 w-full fixed bottom-0 min-h-[105px] md:h-[105px] px-[1.875rem] py-[1.25rem] left-0 right-0;
 }
 
-.bp-blur {
-    backdrop-filter: blur(47.5px);
+@layer utilities {
+    .bp-blur {
+        backdrop-filter: blur(47.5px);
+    }
 }

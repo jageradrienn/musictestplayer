@@ -1,5 +1,5 @@
 .popupDiv {
-    @apply mx-auto bg-popupbg text-dark p-7 flex flex-col items-center justify-center max-w-[450px] md:max-w-[900px] md:p-[3.75rem];
+    @apply relative mx-auto bottom-0 bg-white/40 bp-blur shadow-lg rounded-md text-dark p-7 flex flex-col items-center justify-center max-w-[450px] md:max-w-[900px] md:p-[3.75rem] max-h-[763px];
 }
 
 @layer utilities {

@@ -7,6 +7,7 @@ import Musiclist from "../components/Musiclist.vue";
 import HeadingWrapper from "../components/HeadingWrapper.vue";
 import TopListCard from "../components//cards/TopListCard.vue";
 import CircleCard from "../components//cards/CircleCard.vue";
+import Popup from "../components/Popup.vue";
 import image1 from "@/assets/images/pop01.png";
 import image2 from "@/assets/images/pop02.png";
 import image3 from "@/assets/images/pop03.png";
@@ -29,9 +30,8 @@ import a04 from "@/assets/images/A04.png";
 import a05 from "@/assets/images/A05.png";
 import a06 from "@/assets/images/A06.png";
 import a07 from "@/assets/images/A07.png";
-import { onMounted, ref, onBeforeUnmount } from "vue";
 
-import Popup from "../components/Popup.vue";
+import { onMounted, ref, onBeforeUnmount } from "vue";
 
 const upScroll = ref(false);
 
@@ -231,7 +231,7 @@ const CirlceListItems = [
 </script>
 
 <template>
-  <main class="container">
+  <main class="container h-screen relative">
     <section class="popular">
       <HeadingWrapper headingText="Népszerű zeneszámok" linkHref="#" linkText="Összes" />
       <div
@@ -269,6 +269,8 @@ const CirlceListItems = [
     </section>
 
     <Footer :class="{ show: upScroll, hidden: !upScroll }" />
-    <Popup :class="{ show: contactClick, hidden: !contactClick }" />
+
+  
+  
   </main>
 </template>

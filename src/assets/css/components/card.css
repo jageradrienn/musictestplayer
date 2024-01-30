@@ -1,9 +1,24 @@
 .card {
-    @apply p-2.5 max-w-[100px];
+    @apply p-2.5 max-w-[100px] rounded-lg hover:bg-white hover:drop-shadow-lg;
 }
 
 .card-wrapper {
     @apply relative pt-3 pb-3;
+}
+
+.overlay {
+    @apply rounded-lg absolute top-[12px] bottom-0 left-0 right-0 w-full opacity-0 hover:opacity-100 bg-dark/40 transition-transform;
+    height: calc(100% - 24px);
+}
+
+#card-play {
+    @apply absolute right-5 bottom-6 transition-transform;
+    z-index: 100;
+
+}
+
+#card-play:hover {
+    transform: translate(-50%, -50%);
 }
 
 @media screen and (min-width: 450px) {

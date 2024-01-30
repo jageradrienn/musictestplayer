@@ -6,11 +6,12 @@ const props = defineProps(["cardItem"]);
   <article class="card">
     <div class="card-wrapper">
       <img
+        id="card-img"
         class="w-full aspect-ratio rounded-xl"
         :src="cardItem.imageUrl"
         :alt="cardItem.alt"
       />
-      <button class="absolute right-5 bottom-6">
+      <button id="card-play">
         <svg
           width="36"
           height="36"
@@ -30,6 +31,7 @@ const props = defineProps(["cardItem"]);
           />
         </svg>
       </button>
+      <div class="overlay"></div>
     </div>
     <div class="truncate">
       <h4 class="list-items-title truncate text-center md:text-left">

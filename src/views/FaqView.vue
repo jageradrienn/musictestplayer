@@ -1,8 +1,7 @@
 <script setup>
 import FaqCard from "../components/cards/FaqCard.vue";
+import Popup from "../components/Popup.vue";
 import { onMounted, onUnmounted, ref } from "vue";
-
-
 
 const isHomeActive = ref(true);
 
@@ -87,6 +86,7 @@ const faqItems = [
     <section class="faq-accordion">
       <FaqCard v-for="item in faqItems" :key="item.id" :faqItem="item" />
     </section>
+    <Popup id="home-popup" class="popupPos" />
 
     <!-- <FaqPopup :popUpItem="popUpItem" /> -->
   </main>

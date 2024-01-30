@@ -1,32 +1,28 @@
 <script setup>
 import LogoIpsum from "@/components/icons/logo.vue";
 import Popup from "@/components/Popup.vue";
-import ModalForm from "@/components/ModalForm.vue";
 import { onMounted, defineComponent, onBeforeUnmount, ref } from "vue";
-
-const showModal = ref(false);
-const modalTitle = "Kapcsolat";
 
 const contactClick = ref(false);
 
-const activeItem = ref("home");
-const setActiveItem = (item) => {
-  activeItem.value = item;
+/* const contactClick = ref(false);
+const isUpscroll = () => {
+  return window.scrollY > 0;
 };
 
-onMounted(() => {
-  /*const changeMenu = (ev) => {
-    var wasActive = false;
-    let homeLink = document.querySelector("#home-link");
-    let faqLink = document.querySelector("#faq-link");
-    let contactLink = document.querySelector("#contact-link");
+const handleScroll = () => {
+  upScroll.value = isUpscroll();
+};
 
-    if (ev.target.innerText === "Főoldal") {
-      setActiveItem("home");
-    } else if (ev.target.innerText === "FAQ") {
-      setActiveItem("faq");
-    }
-  };*/
+onBeforeUnmount(() => {
+  contact - link.removeEventListener("scroll", handleScroll);
+});
+
+contactLink.addEventListener("click", ContactClick);
+*/
+const PopupShow = () => {};
+
+onMounted(() => {
   const changeMenu = (ev) => {
     var wasActive = false;
     let homeLink = document.querySelector("#home-link");
@@ -34,7 +30,6 @@ onMounted(() => {
     let contactLink = document.querySelector("#contact-link");
 
     if (ev.target.innerText === "Főoldal") {
-      setActiveItem("home");
       wasActive = homeLink.classList.contains("active-btn");
 
       if (!wasActive) {
@@ -44,7 +39,6 @@ onMounted(() => {
         contactLink.classList.replace("active-btn", "inactive-btn");
       }
     } else if (ev.target.innerText === "FAQ") {
-      setActiveItem("faq");
       wasActive = faqLink.classList.contains("active-btn");
 
       if (!wasActive) {
@@ -56,7 +50,6 @@ onMounted(() => {
         // imgContact.setAttribute("src", "./src/components/icons/contact.svg");
       }
     } else if (ev.target.innerText === "Kapcsolat") {
-      popUpShow(activeItem);
       wasActive = contactLink.classList.contains("active-btn");
 
       if (!wasActive) {
@@ -68,8 +61,8 @@ onMounted(() => {
       }
     }
   };
-
   menu.addEventListener("click", changeMenu);
+  contactLink.addEventListener("click", PopupShow);
 });
 </script>
 
@@ -101,27 +94,21 @@ onMounted(() => {
           </RouterLink>
         </li>
         <li
-          id="contact-link"
+          id="contactLink"
           class="nav-item inactive-btn flex justify-center items-center gap-1"
-          @click="showModal = true"
         >
           <RouterLink to="#" class="nav-item flex justify-center items-center gap-1">
-            <img src="../icons/contact.svg" alt="message" id="imgContact" />
+            <img
+              src="../icons/contact.svg"
+              alt="message"
+              id="imgContact"
+              @click="setActiveItem('contact')"
+              :class="{ active: activeItem === 'contact' }"
+            />
             Kapcsolat
           </RouterLink>
         </li>
       </ul>
     </nav>
   </header>
-
-  <div>
-    <!--     <button @click="showModal = true">Modal megnyitása</button> -->
-    <Popup
-      :title="modalTitle"
-      :isShowing="showModal"
-      @update:isShowing="showModal = $event"
-    >
-      <ModalForm />
-    </Popup>
-  </div>
 </template>
