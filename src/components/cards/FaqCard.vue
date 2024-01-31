@@ -15,7 +15,7 @@
 
 <script setup>
 import ClosedA from "../icons/closedArrow.svg";
-import OpenedA from "../icons/purpleArrow.svg";
+import OpenedA from "../icons/arrowDown.svg";
 import { ref, inject, defineProps } from "vue";
 
 const emit = defineEmits(["toggleAnswer"]);

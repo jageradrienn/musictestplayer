@@ -15,7 +15,6 @@
             @click="close"
           >
             <img class="p-1" src="../../src/components/icons/close.svg" alt="Sms" />
-            <!-- <Close :class="['p-3', 'cursor-pointer']" :alt="close" /> -->
           </span>
         </div>
 
@@ -28,7 +27,6 @@
 </template>
 
 <script setup>
-//import Close from "@/components/icons/close.vue";
 import { defineProps, defineEmits } from "vue";
 
 const props = defineProps({

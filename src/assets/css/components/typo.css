@@ -19,5 +19,5 @@
 }
 
 .card-label {
-    @apply text-[13.8px] font-bold bottom-4 left-1/2 transform -translate-x-1/2 text-white;
+    @apply text-sm font-bold bottom-4 left-[45%] transform -translate-x-[40%] text-white;
 }

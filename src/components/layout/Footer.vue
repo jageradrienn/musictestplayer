@@ -10,8 +10,6 @@
             <li class="list-items-title">Purple Noise</li>
             <li class="list-items-desc">Boris Brejcha</li>
           </ul>
-
-          <!-- <Musiclist /> -->
         </div>
       </section>
       <section class="footer-player">
