@@ -11,7 +11,7 @@
       </p>
     </div>
 
-    <div>
+    <div class="flex flex-col justify-end w-full">
       <Musiclist v-for="item in playList" :key="item.id" :musicElement="item" />
     </div>
   </article>

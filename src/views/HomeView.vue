@@ -11,7 +11,7 @@
     <section class="toplist">
       <HeadingWrapper headingText="Toplista" linkHref="#" linkText="Összes" />
       <div
-        class="top-grid grid grid-cols-1 justify-center items-center gap-4 sm:grid-cols-[minmax(0,604px),minmax(0,604px)]"
+        class="top-grid grid grid-cols-1 justify-center items-center gap-4 hover:custom-cursor sm:grid-cols-[minmax(0,604px),minmax(0,604px)]"
       >
         <TopListCard
           :topListCardUrl="topimg"
