@@ -25,8 +25,6 @@
 import FaqCard from "../components/cards/FaqCard.vue";
 import { onMounted, onUnmounted, ref, nextTick } from "vue";
 
-const isHomeActive = ref(true);
-
 const toggleAnswer = (id) => {
   faqs.value = faqs.value.map((faq) =>
     faq.isOpen && faq.id !== id ? { ...faq, isOpen: false } : faq

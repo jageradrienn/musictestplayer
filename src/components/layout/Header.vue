@@ -6,8 +6,13 @@
     <nav class="p-6 relative z-40" id="menu">
       <ul class="flex justify-center items-center gap-1 sm:gap-5">
         <li
-          id="home-link"
+          id="home"
           class="nav-item active-btn flex justify-center items-center gap-1"
+          @click="
+            {
+              toggleMenu('home');
+            }
+          "
         >
           <RouterLink to="/" class="nav-item flex justify-center items-center gap-1">
             <HomeIcon :alt="home" />
@@ -15,8 +20,13 @@
           </RouterLink>
         </li>
         <li
-          id="faq-link"
+          id="faq"
           class="nav-item inactive-btn flex justify-center items-center gap-1"
+          @click="
+            {
+              toggleMenu('faq');
+            }
+          "
         >
           <RouterLink to="/faq" class="nav-item flex justify-center items-center gap-1">
             <QuestionIcon :alt="question" />
@@ -24,9 +34,14 @@
           </RouterLink>
         </li>
         <li
-          id="contact-link"
+          id="contact"
           class="nav-item inactive-btn flex justify-center items-center gap-1"
-          @click="showModal = true"
+          @click="
+            {
+              toggleMenu('contact');
+              showModal = true;
+            }
+          "
         >
           <RouterLink to="#" class="nav-item flex justify-center items-center gap-1">
             <MessageIcon :alt="message" />
@@ -36,7 +51,6 @@
       </ul>
     </nav>
     <div>
-      <!--     <button @click="showModal = true">Modal megnyitása</button> -->
       <Popup
         :title="modalTitle"
         :isShowing="showModal"
@@ -54,62 +68,19 @@ import Popup from "@/components/Popup.vue";
 import ModalForm from "@/components/ModalForm.vue";
 import HomeIcon from "@/components/icons/home.vue";
 import QuestionIcon from "@/components/icons/question.vue";
-import MessageIcon from "@/components/icons/sms.vue";
-import { onMounted, defineComponent, onBeforeUnmount, ref } from "vue";
+import MessageIcon from "@/components/icons/live.vue";
+import { onMounted, ref } from "vue";
 
 const showModal = ref(false);
 const modalTitle = "Kapcsolat";
 
-const contactClick = ref(false);
-
-const activeItem = ref("home");
-const setActiveItem = (item) => {
-  activeItem.value = item;
+const toggleMenu = (activeId) => {
+  const MenuItems = document.querySelectorAll(".nav-item");
+  MenuItems.forEach((item) => {
+    item.classList.contains("active-btn") && item.id !== activeId
+      ? item.classList.replace("active-btn", "inactive-btn")
+      : null;
+    item.id === activeId ? item.classList.replace("inactive-btn", "active-btn") : null;
+  });
 };
-
-onMounted(() => {
-  const changeMenu = (ev) => {
-    var wasActive = false;
-    let homeLink = document.querySelector("#home-link");
-    let faqLink = document.querySelector("#faq-link");
-    let contactLink = document.querySelector("#contact-link");
-
-    if (ev.target.innerText === "Főoldal") {
-      setActiveItem("home");
-      wasActive = homeLink.classList.contains("active-btn");
-
-      if (!wasActive) {
-        homeLink.classList.replace("inactive-btn", "active-btn");
-        // imgHome.setAttribute("src", "./src/components/icons/home2.vue");
-        faqLink.classList.replace("active-btn", "inactive-btn");
-        contactLink.classList.replace("active-btn", "inactive-btn");
-      }
-    } else if (ev.target.innerText === "FAQ") {
-      setActiveItem("faq");
-      wasActive = faqLink.classList.contains("active-btn");
-
-      if (!wasActive) {
-        faqLink.classList.replace("inactive-btn", "active-btn");
-        //  imgFaq.setAttribute("src", "./src/components/icons/question2.vue");
-        homeLink.classList.replace("active-btn", "inactive-btn");
-        //  imgHome.setAttribute("src", "./src/components/icons/home2.vue");
-        contactLink.classList.replace("active-btn", "inactive-btn");
-        // imgContact.setAttribute("src", "./src/components/icons/contact.vue");
-      }
-    } else if (ev.target.innerText === "Kapcsolat") {
-      popUpShow(activeItem);
-      wasActive = contactLink.classList.contains("active-btn");
-
-      if (!wasActive) {
-        contactLink.classList.replace("inactive-btn", "active-btn");
-        //   imgContact.setAttribute("src", "./src/components/icons/contact.vue");
-        homeLink.classList.replace("active-btn", "inactive-btn");
-        //   imgHome.setAttribute("src", "./src/components/icons/home2.vue");
-        faqLink.classList.replace("active-btn", "inactive-btn");
-      }
-    }
-  };
-
-  menu.addEventListener("click", changeMenu);
-});
 </script>
