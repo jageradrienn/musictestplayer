@@ -34,7 +34,7 @@ onMounted(() => {
 
       if (!wasActive) {
         homeLink.classList.replace("inactive-btn", "active-btn");
-        // imgHome.setAttribute("src", "./src/components/icons/home2.svg");
+        // imgHome.setAttribute("src", "./src/components/icons/home2.vue");
         faqLink.classList.replace("active-btn", "inactive-btn");
         contactLink.classList.replace("active-btn", "inactive-btn");
       }
@@ -43,20 +43,20 @@ onMounted(() => {
 
       if (!wasActive) {
         faqLink.classList.replace("inactive-btn", "active-btn");
-        //  imgFaq.setAttribute("src", "./src/components/icons/question2.svg");
+        //  imgFaq.setAttribute("src", "./src/components/icons/question2.vue");
         homeLink.classList.replace("active-btn", "inactive-btn");
-        //  imgHome.setAttribute("src", "./src/components/icons/home2.svg");
+        //  imgHome.setAttribute("src", "./src/components/icons/home2.vue");
         contactLink.classList.replace("active-btn", "inactive-btn");
-        // imgContact.setAttribute("src", "./src/components/icons/contact.svg");
+        // imgContact.setAttribute("src", "./src/components/icons/contact.vue");
       }
     } else if (ev.target.innerText === "Kapcsolat") {
       wasActive = contactLink.classList.contains("active-btn");
 
       if (!wasActive) {
         contactLink.classList.replace("inactive-btn", "active-btn");
-        //   imgContact.setAttribute("src", "./src/components/icons/contact.svg");
+        //   imgContact.setAttribute("src", "./src/components/icons/contact.vue");
         homeLink.classList.replace("active-btn", "inactive-btn");
-        //   imgHome.setAttribute("src", "./src/components/icons/home2.svg");
+        //   imgHome.setAttribute("src", "./src/components/icons/home2.vue");
         faqLink.classList.replace("active-btn", "inactive-btn");
       }
     }
@@ -80,7 +80,7 @@ onMounted(() => {
           class="nav-item active-btn flex justify-center items-center gap-1"
         >
           <RouterLink to="/" class="nav-item flex justify-center items-center gap-1">
-            <img src="../icons/home.svg" alt="home" id="imgHome" />
+            <img src="../icons/home.vue" alt="home" id="imgHome" />
             Főoldal
           </RouterLink>
         </li>
@@ -89,7 +89,7 @@ onMounted(() => {
           class="nav-item inactive-btn flex justify-center items-center gap-1"
         >
           <RouterLink to="/faq" class="nav-item flex justify-center items-center gap-1">
-            <img src="../icons/question.svg" alt="question" id="imgFaq" />
+            <img src="../icons/question.vue" alt="question" id="imgFaq" />
             FAQ
           </RouterLink>
         </li>
@@ -99,7 +99,7 @@ onMounted(() => {
         >
           <RouterLink to="#" class="nav-item flex justify-center items-center gap-1">
             <img
-              src="../icons/contact.svg"
+              src="../icons/contact.vue"
               alt="message"
               id="imgContact"
               @click="setActiveItem('contact')"

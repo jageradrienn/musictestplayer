@@ -1,18 +1,5 @@
-<script setup>
-import Musiclist from "../Musiclist.vue";
-import Shuffle from "../icons/shuffle.vue";
-import VolumeHigh from "../icons/volume-high.vue";
-import RepeateOne from "../icons/repeate-one.vue";
-import Previous from "../icons/previous.vue";
-import Pause from "../icons/pause.vue";
-import Next from "../icons/next.vue";
-import Maximize from "../icons/maximize.vue";
-import Heart from "../icons/heart.vue";
-import Progress from "../progress.vue";
-</script>
-
 <template>
-  <footer class="main-footer bp-blur">
+  <footer class="main-footer bp-blur z-20">
     <div
       class="grid grid-cols-1 gap-4 md:grid-cols-[minmax(0,305px),minmax(0,787px),minmax(0,232px)] mx-auto place-content-center"
     >
@@ -52,3 +39,16 @@ import Progress from "../progress.vue";
     </div>
   </footer>
 </template>
+
+<script setup>
+import Musiclist from "../Musiclist.vue";
+import Shuffle from "../icons/shuffle.vue";
+import VolumeHigh from "../icons/volume-high.vue";
+import RepeateOne from "../icons/repeate-one.vue";
+import Previous from "../icons/previous.vue";
+import Pause from "../icons/pause.vue";
+import Next from "../icons/next.vue";
+import Maximize from "../icons/maximize.vue";
+import Heart from "../icons/heart.vue";
+import Progress from "../progress.vue";
+</script>

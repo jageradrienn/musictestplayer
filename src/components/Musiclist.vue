@@ -1,8 +1,3 @@
-<script setup>
-/* const props = defineProps(["id", "url", "listAuth", "listTitle"]); */
-const props = defineProps(["musicElement"]);
-</script>
-
 <template>
   <div
     class="music-list-class flex justify-start items-center md:pl-4 max-w-[300px] sm:max-w-[150px] lg:max-w-[300px]"
@@ -14,3 +9,8 @@ const props = defineProps(["musicElement"]);
     </div>
   </div>
 </template>
+
+<script setup>
+/* const props = defineProps(["id", "url", "listAuth", "listTitle"]); */
+const props = defineProps(["musicElement"]);
+</script>

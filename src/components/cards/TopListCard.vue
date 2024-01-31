@@ -1,8 +1,3 @@
-<script setup>
-const props = defineProps(["topListCardUrl", "topListCardAlt", "playList"]);
-import Musiclist from ".././Musiclist.vue";
-</script>
-
 <template>
   <article class="hits-wrapper">
     <div class="relative w-full max-h-[200px] mb-5 sm:max-w-[170px] max-h-[100%] mb-0">
@@ -21,3 +16,8 @@ import Musiclist from ".././Musiclist.vue";
     </div>
   </article>
 </template>
+
+<script setup>
+const props = defineProps(["topListCardUrl", "topListCardAlt", "playList"]);
+import Musiclist from ".././Musiclist.vue";
+</script>

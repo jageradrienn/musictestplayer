@@ -1,4 +1,6 @@
-<svg
+
+    <template>
+    <svg
     width="21"
     height="20"
     viewBox="0 0 21 20"
@@ -10,3 +12,7 @@
       fill="white"
     />
   </svg>
+
+</template>
+
+<script></script>

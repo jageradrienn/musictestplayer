@@ -1,4 +1,5 @@
-<svg
+<template>
+  <svg
     width="37"
     height="37"
     viewBox="0 0 37 37"
@@ -44,3 +45,6 @@
       stroke-linecap="round"
     />
   </svg>
+</template>
+
+<script></script>

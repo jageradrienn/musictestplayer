@@ -1,9 +1,17 @@
 .popupDiv {
-    @apply relative mx-auto bottom-0 bg-white/40 bp-blur shadow-lg rounded-md text-dark p-7 flex flex-col items-center justify-center max-w-[450px] md:max-w-[900px] md:p-[3.75rem] max-h-[763px];
+    @apply absolute right-0 left-0 mx-auto w-full -bottom-10 bg-white/40 bp-blur shadow-lg rounded-2xl text-dark p-2 lg:p-7 flex flex-col items-center justify-center max-w-[450px] md:max-w-[900px] md:p-[3.75rem] max-h-[763px];
+}
+
+.form-input {
+    @apply rounded-xl w-full h-[40px] mt-2 md:h-[57px] px-5 placeholder-popuptext text-lg outline-none focus:bg-white focus:shadow-lg;
+}
+
+.form-text-area {
+    @apply rounded-xl w-full mt-2 px-5 py-5 placeholder-popuptext text-lg focus:bg-white outline-none focus:shadow-lg;
 }
 
 @layer utilities {
     .submit-btn {
-        @apply text-white bg-popupsubmit rounded w-full h-[40px] flex justify-center items-center gap-2 mt-7 md:h-[54px] rounded-3xl;
+        @apply text-white bg-popupsubmit rounded w-full h-[40px] flex justify-center items-center gap-2 mt-7 md:h-[54px] sm:rounded-3xl focus:bg-blueDark;
     }
 }

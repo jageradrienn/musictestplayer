@@ -1,3 +1,45 @@
+<template>
+  <main class="container h-screen relative">
+    <section class="popular">
+      <HeadingWrapper headingText="Népszerű zeneszámok" linkHref="#" linkText="Összes" />
+      <div
+        class="flex justify-between md:justify-center xl:justify-between items-start align-self-stretch flex-wrap gap-4"
+      >
+        <Card v-for="card in cardItems" :key="card.id" :cardItem="card" />
+      </div>
+    </section>
+    <section class="toplist">
+      <HeadingWrapper headingText="Toplista" linkHref="#" linkText="Összes" />
+      <div
+        class="top-grid grid grid-cols-1 justify-center items-center gap-4 sm:grid-cols-[minmax(0,604px),minmax(0,604px)]"
+      >
+        <TopListCard
+          :topListCardUrl="topimg"
+          topListCardAlt="100 TOP Hits"
+          :playList="Top100Hits"
+        />
+        <TopListCard
+          :topListCardUrl="musicimg"
+          topListCardAlt="Műsorlista"
+          :playList="MusicListItems"
+        />
+      </div>
+    </section>
+    <section class="authors pb-24">
+      <HeadingWrapper headingText="Előadók" linkHref="#" linkText="View all" />
+      <div class="flex items-start gap-4 flex-wrap justify-center xl:justify-between">
+        <CircleCard
+          v-for="item in CirlceListItems"
+          :key="item.id"
+          :circleElement="item"
+        />
+      </div>
+    </section>
+
+    <Footer :class="{ show: upScroll, hidden: !upScroll }" />
+  </main>
+</template>
+
 <script setup>
 //import TheWelcome from "../components/TheWelcome.vue";
 import Footer from "../components/layout/Footer.vue";
@@ -229,48 +271,3 @@ const CirlceListItems = [
   },
 ];
 </script>
-
-<template>
-  <main class="container h-screen relative">
-    <section class="popular">
-      <HeadingWrapper headingText="Népszerű zeneszámok" linkHref="#" linkText="Összes" />
-      <div
-        class="flex justify-between md:justify-center xl:justify-between items-start align-self-stretch flex-wrap gap-4"
-      >
-        <Card v-for="card in cardItems" :key="card.id" :cardItem="card" />
-      </div>
-    </section>
-    <section class="toplist">
-      <HeadingWrapper headingText="Toplista" linkHref="#" linkText="Összes" />
-      <div
-        class="top-grid grid grid-cols-1 justify-center items-center gap-4 sm:grid-cols-[minmax(0,604px),minmax(0,604px)]"
-      >
-        <TopListCard
-          :topListCardUrl="topimg"
-          topListCardAlt="100 TOP Hits"
-          :playList="Top100Hits"
-        />
-        <TopListCard
-          :topListCardUrl="musicimg"
-          topListCardAlt="Műsorlista"
-          :playList="MusicListItems"
-        />
-      </div>
-    </section>
-    <section class="authors pb-24">
-      <HeadingWrapper headingText="Előadók" linkHref="#" linkText="View all" />
-      <div class="flex items-start gap-4 flex-wrap justify-center xl:justify-between">
-        <CircleCard
-          v-for="item in CirlceListItems"
-          :key="item.id"
-          :circleElement="item"
-        />
-      </div>
-    </section>
-
-    <Footer :class="{ show: upScroll, hidden: !upScroll }" />
-
-  
-  
-  </main>
-</template>

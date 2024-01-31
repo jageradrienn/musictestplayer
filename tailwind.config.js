@@ -14,7 +14,9 @@ export default {
         'popupinput': '#EFF1FD',
         'popuptext': '#A9B0F3',
         'dark': '#121212',
-        'popupsubmit': '#7C74EE'
+        'popupsubmit': '#7C74EE',
+        'blueDark': '#4E43BE',
+        'gray': '#C4C4C4',
       },
       fontFamily: {
         montserrat: "Montserrat",

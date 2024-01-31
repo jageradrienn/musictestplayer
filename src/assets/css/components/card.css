@@ -1,5 +1,5 @@
 .card {
-    @apply p-2.5 max-w-[100px] rounded-lg hover:bg-white hover:drop-shadow-lg;
+    @apply p-2.5 max-w-[100px] rounded-lg hover:bg-white hover:drop-shadow-lg cursor-pointer transition ease-in-out delay-150;
 }
 
 .card-wrapper {
@@ -7,22 +7,35 @@
 }
 
 .overlay {
-    @apply rounded-lg absolute top-[12px] bottom-0 left-0 right-0 w-full opacity-0 hover:opacity-100 bg-dark/40 transition-transform;
     height: calc(100% - 24px);
+    @apply rounded-lg absolute top-[12px] bottom-0 left-0 right-0 w-full opacity-0;
 }
 
-#card-play {
-    @apply absolute right-5 bottom-6 transition-transform;
-    z-index: 100;
-
+.card-play {
+    @apply absolute right-5 bottom-6 transition-transform duration-500 ease-in-out z-10;
 }
 
-#card-play:hover {
-    transform: translate(-50%, -50%);
+@layer utilities {
+    .card:hover .card-play {
+        @apply translate-x-[-80%] translate-y-[-90%] sm:translate-x-[-80%] sm:translate-y-[-90%] md:translate-x-[-80%] md:translate-y-[-90%];
+    }
+}
+
+.card:hover .overlay {
+    @apply opacity-100 bg-dark/40 transition-transform;
+}
+
+.card:hover .card-play svg {
+    @apply w-[50px] h-[50px] md:w-[50px] h-[50px];
+
 }
 
 @media screen and (min-width: 450px) {
     .card {
         @apply max-w-[130px] md:max-w-[190px];
+    }
+
+    .card:hover .card-play {
+        transform: translate(-80%, -90%);
     }
 }

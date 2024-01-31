@@ -1,5 +1,5 @@
 .nav-item {
-    @apply w-[16.75rem] h-[3.375rem] rounded-xl p-4;
+    @apply w-full max-w-[16.75rem] h-[3.375rem] rounded-xl p-1 sm:p-3 sm:p-4;
 }
 
 @layer components {

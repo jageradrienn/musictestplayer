@@ -1,18 +1,17 @@
 @layer components {
     .faq-accordion {
-        @apply max-w-[900px] mx-auto flex flex-col items-center;
+        @apply mx-auto flex flex-col items-center w-full max-w-[900px];
     }
 
     .faq-article {
-        @apply flex flex-col justify-center bg-white text-black mb-4 max-w-[350px] rounded-xl p-6 sm:max-w-[550px] rounded-2xl md:max-w-[900px] rounded-3xl;
+        @apply flex flex-col justify-center bg-white text-black mb-4 max-w-[350px] rounded-xl p-6 sm:max-w-[550px] w-full sm:rounded-2xl md:rounded-3xl md:max-w-[900px];
     }
 }
 
 .bg-faq-page {
     background-image: url("../../svg/bg-faq.svg");
-    /*     background-attachment: fixed;
-    background-position-y: 35%; */
-    @apply bg-bgBlack bg-no-repeat bg-cover text-white;
+    background-attachment: fixed;
+    @apply bg-bgBlack bg-no-repeat bg-cover text-white bg-center;
 }
 
 .close-arrow {

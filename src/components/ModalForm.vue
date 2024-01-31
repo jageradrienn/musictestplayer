@@ -5,7 +5,9 @@
       <input
         type="text"
         name="name"
-        class="bg-popupinput rounded-2xl w-full h-[40px] mt-2 md:h-[57px]"
+        class="bg-popupinput form-input"
+        required
+        placeholder="Boris Brejcha"
       />
     </div>
     <div class="mb-6">
@@ -13,23 +15,33 @@
       <input
         type="email"
         name="e-mail"
-        class="bg-popupinput rounded-2xl w-full h-[40px] mt-2 md:h-[57px]"
+        class="bg-popupinput form-input"
+        required
+        placeholder="boris.brejcha@gmail.com"
       />
     </div>
     <div class="mb-6">
       <label for="message">Üzenet</label>
-      <input
-        type="text"
-        name="message"
-        class="bg-popupinput rounded-2xl w-full h-60 mt-2 md:h-[210px]"
-      />
+      <textarea
+        id="message"
+        placeholder="Üzenet"
+        class="bg-popupinput form-text-area"
+        rows="8"
+        required
+      ></textarea>
     </div>
     <button
       type="submit"
       class="submit-btn hover:bg-gradient-to-r from-linearGreen to-linearPurple hover:drop-shadow-xl"
     >
-      <span><img src="../../src/components/icons/sms.svg" alt="Sms" /></span>
+      <span>
+        <SmsIcon :alt="Sms" />
+      </span>
       <span>Küldés</span>
     </button>
   </form>
 </template>
+
+<script setup>
+import SmsIcon from "@/components/icons/sms.vue";
+</script>
