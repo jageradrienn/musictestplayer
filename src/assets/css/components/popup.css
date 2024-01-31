@@ -1,5 +1,5 @@
 .popupDiv {
-    @apply absolute right-0 left-0 mx-auto w-full -bottom-10 bg-white/40 bp-blur shadow-lg rounded-2xl text-dark p-2 lg:p-7 flex flex-col items-center justify-center max-w-[450px] md:max-w-[900px] md:p-[3.75rem] max-h-[763px];
+    @apply absolute right-0 left-0 mx-auto w-full bottom-0 bg-white/40 bp-blur shadow-lg rounded-2xl text-dark p-2 lg:p-7 flex flex-col items-center justify-center max-w-[450px] md:max-w-[900px] md:p-[3.75rem] md:max-h-[730px];
 }
 
 .form-input {

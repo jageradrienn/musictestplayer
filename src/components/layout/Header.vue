@@ -61,6 +61,7 @@
     </div>
   </header>
 </template>
+
 <script setup>
 import LogoIpsum from "@/components/icons/logo.vue";
 import Popup from "@/components/Popup.vue";
@@ -68,15 +69,10 @@ import ModalForm from "@/components/ModalForm.vue";
 import HomeIcon from "@/components/icons/home.vue";
 import QuestionIcon from "@/components/icons/question.vue";
 import MessageIcon from "@/components/icons/live.vue";
-import { ref, onUpdated, onMounted } from "vue";
+import { onMounted, ref } from "vue";
 
 const showModal = ref(false);
 const modalTitle = "Kapcsolat";
-const originalClassLists = {
-  home: [],
-  faq: [],
-  contact: [],
-};
 
 const toggleMenu = (activeId) => {
   const MenuItems = document.querySelectorAll(".nav-item");
@@ -87,54 +83,4 @@ const toggleMenu = (activeId) => {
     item.id === activeId ? item.classList.replace("inactive-btn", "active-btn") : null;
   });
 };
-
-onMounted(() => {
-  const currentPath = window.location.pathname;
-  const activeId = currentPath === "/" ? "home" : currentPath.replace("/", "");
-
-  toggleMenu(activeId);
-});
-
-onUpdated(() => {
-  const MenuItems = document.querySelectorAll(".nav-item");
-
-  const hasChanged = [...MenuItems].some(
-    (item, index) => item.classList.value !== originalClassLists.home[index].value
-  );
-
-  if (hasChanged) {
-    const currentPath = window.location.pathname;
-    const activeId = currentPath === "/" ? "home" : currentPath.replace("/", "");
-
-    MenuItems.forEach((item, index) => {
-      item.className = originalClassLists[activeId][index].value;
-    });
-  }
-});
 </script>
-
-<!--
-   <script setup>
-  import LogoIpsum from "@/components/icons/logo.vue";
-  import Popup from "@/components/Popup.vue";
-  import ModalForm from "@/components/ModalForm.vue";
-  import HomeIcon from "@/components/icons/home.vue";
-  import QuestionIcon from "@/components/icons/question.vue";
-  import MessageIcon from "@/components/icons/live.vue";
-  import { onMounted, ref } from "vue";
-  
-  const showModal = ref(false);
-  const modalTitle = "Kapcsolat";
-  
-  const toggleMenu = (activeId) => {
-    const MenuItems = document.querySelectorAll(".nav-item");
-    MenuItems.forEach((item) => {
-      item.classList.contains("active-btn") && item.id !== activeId
-        ? item.classList.replace("active-btn", "inactive-btn")
-        : null;
-      item.id === activeId ? item.classList.replace("inactive-btn", "active-btn") : null;
-    });
-  };
-  </script>
-  
--->

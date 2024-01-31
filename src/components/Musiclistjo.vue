@@ -1,14 +1,12 @@
 <template>
   <div
     class="music-list-class"
-    @mouseover="handleMouseOver"
-    @mouseout="handleMouseOut"
-    :class="{
-      'bg-musicpurple rounded-xl ': isHovered,
-    }"
+    @mouseenter="handleMouseEnter"
+    @mouseleave="handleMouseLeave"
+    :class="{ 'bg-musicpurple rounded-xl': isHovered }"
   >
     <div class="flex flex-col px-4 pt-2 mb-4 text-xl font-medium">
-      <button class="delayed-icon" v-if="isHovered">
+      <button class="delayed-icon" v-show="isHovered">
         <Play />
       </button>
       <span v-show="!isHovered">{{ musicElement.id }}</span>
@@ -31,11 +29,11 @@ import { ref, defineProps } from "vue";
 const props = defineProps(["musicElement"]);
 const isHovered = ref(false);
 
-const handleMouseOver = () => {
+const handleMouseEnter = () => {
   isHovered.value = true;
 };
 
-const handleMouseOut = () => {
+const handleMouseLeave = () => {
   isHovered.value = false;
 };
 </script>
